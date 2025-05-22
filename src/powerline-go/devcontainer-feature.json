@@ -1,0 +1,35 @@
+{
+    "name": "Powerline Go",
+    "id": "powerline-go",
+    "version": "1.0.0",
+    "description": "Adds Powerline Go to your Dev Container",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "Version of Powerline Go to install"
+        },
+        "powerline_modules": {
+            "type": "string",
+            "default": "kube,venv,ssh,cwd,perms,git,hg,exit,root",
+            "description": "A comma-separated list of Powerline Go modules to enable"
+        },
+        "powerline_theme": {
+            "type": "string",
+            "default": "default",
+            "enum": [
+                "default",
+                "low-contrast",
+                "gruvbox",
+                "solarized-dark16",
+                "solarized-light16"
+            ],
+            "description": "The Powerline Go theme to use"
+        }
+    },
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/go": {
+            "version": "latest"
+        }
+    }
+}
